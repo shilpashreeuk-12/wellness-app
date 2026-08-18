@@ -1,0 +1,29 @@
+{
+  "name": "Wellness - Personal Tracking App",
+  "short_name": "Wellness",
+  "description": "Your personal, private space for period tracking, habits, journaling, and more",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDF1E2",
+  "theme_color": "#655A7C",
+  "orientation": "portrait-primary",
+  "categories": ["health", "lifestyle", "productivity"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
