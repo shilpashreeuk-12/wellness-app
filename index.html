@@ -4,12 +4,73 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Your personal, private space for period tracking, habits, journaling, and more" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Wellness - Personal Tracking App for Women</title>
+    <meta name="title" content="Wellness - Personal Tracking App for Women" />
+    <meta name="description" content="Your personal, private space for period tracking, habit building, journaling, vision boards, and wellness goals. Secure, beautiful, and designed for women." />
+    <meta name="keywords" content="wellness app, period tracker, habit tracker, women's health, personal wellness, journaling, vision board, self-care" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Wellness App" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://joyful-gaufre-a5699a.netlify.app/" />
+    <meta property="og:title" content="Wellness - Personal Tracking App for Women" />
+    <meta property="og:description" content="Your personal, private space for period tracking, habit building, journaling, vision boards, and wellness goals. Secure, beautiful, and designed for women." />
+    <meta property="og:image" content="https://joyful-gaufre-a5699a.netlify.app/hero.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://joyful-gaufre-a5699a.netlify.app/" />
+    <meta property="twitter:title" content="Wellness - Personal Tracking App for Women" />
+    <meta property="twitter:description" content="Your personal, private space for period tracking, habit building, journaling, vision boards, and wellness goals." />
+    <meta property="twitter:image" content="https://joyful-gaufre-a5699a.netlify.app/hero.png" />
+
+    <!-- PWA -->
     <meta name="theme-color" content="#655A7C" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Wellness" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
     <link rel="manifest" href="/manifest.json" />
-    <title>Wellness - Personal Tracking App</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Wellness - Personal Tracking App",
+      "description": "Personal wellness web app for women featuring period tracking, habit building, journaling, and vision boards",
+      "url": "https://joyful-gaufre-a5699a.netlify.app",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Wellness App"
+      }
+    }
+    </script>
   </head>
   <body>
+    <noscript>
+      <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+        <h1>Wellness - Personal Tracking App</h1>
+        <p>Your personal, private space for period tracking, habit building, journaling, vision boards, and wellness goals.</p>
+        <p><strong>JavaScript is required to run this application.</strong></p>
+        <p>Please enable JavaScript in your browser to access your wellness space.</p>
+      </div>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

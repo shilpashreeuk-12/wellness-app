@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://joyful-gaufre-a5699a.netlify.app/sitemap.xml
