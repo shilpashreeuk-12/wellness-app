@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { AuthProvider, useAuth } from './context/AuthContext'
-import { supabase } from './lib/supabase'
+import { supabase, isSupabaseConfigured } from './lib/supabase'
 import LoginScreen from './components/LoginScreen'
 import Onboarding from './components/Onboarding'
 import AppLockScreen from './components/AppLockScreen'
@@ -503,6 +503,34 @@ const AppContent = () => {
       setIsAppUnlocked(true)
     }
   }, [])
+
+  if (!isSupabaseConfigured) {
+    return (
+      <div className="min-h-screen bg-linen flex items-center justify-center p-4">
+        <div className="card max-w-md w-full text-center space-y-4 p-6 bg-white rounded-2xl shadow-lg border border-amethyst/20">
+          <div className="w-16 h-16 bg-amethyst/10 rounded-full flex items-center justify-center mx-auto text-3xl">
+            🌸
+          </div>
+          <h1 className="text-2xl font-heading font-bold text-gray-800">
+            Setup Required
+          </h1>
+          <p className="text-gray-600 text-sm">
+            Supabase environment variables are missing in your deployment.
+          </p>
+          <div className="bg-purple-50 border border-amethyst/20 rounded-xl p-4 text-left text-xs text-gray-700 space-y-2">
+            <p className="font-semibold text-amethyst">How to fix in Netlify:</p>
+            <ol className="list-decimal list-inside space-y-1.5 text-gray-600">
+              <li>Open your Netlify Dashboard</li>
+              <li>Go to <strong>Site configuration &rarr; Environment variables</strong></li>
+              <li>Add <code className="bg-white px-1 py-0.5 rounded border">VITE_SUPABASE_URL</code></li>
+              <li>Add <code className="bg-white px-1 py-0.5 rounded border">VITE_SUPABASE_ANON_KEY</code></li>
+              <li>Go to <strong>Deploys &rarr; Trigger deploy &rarr; Clear cache and deploy site</strong></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   if (loading) {
     return (
